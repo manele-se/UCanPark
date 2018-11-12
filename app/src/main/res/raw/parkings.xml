@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<parkings>
+    <parking>
+        <name>Lindholmen</name>
+        <free>87</free>
+    </parking>
+    <parking>
+        <name>Danska vägen</name>
+        <free>24</free>
+    </parking>
+    <parking>
+        <name>Redbergsplatsen</name>
+        <free>34</free>
+    </parking>
+    <parking>
+        <name>Götaplatsen</name>
+        <free>17</free>
+    </parking>
+    <parking>
+        <name>Järntorget</name>
+        <free>13</free>
+    </parking>
+    <parking>
+        <name>Chalmersplatsen</name>
+        <free>4</free>
+    </parking>
+</parkings>

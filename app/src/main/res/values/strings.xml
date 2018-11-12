@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ParkingApp</string>
+    <string name="api_url_1">http://data.goteborg.se/ParkingService/v2.1/CommuterParkings/91274584-8cd7-447d-b4ed-7a36674a4494\?latitude=57.7072052&amp;longitude=11.9370855&amp;radius=3100&amp;format=XML</string>
+    <string name="api_url_2">http://data.goteborg.se/ParkingService/v2.1/PrivateTollParkings/91274584-8cd7-447d-b4ed-7a36674a4494\?latitude=57.7072052&amp;longitude=11.9370855&amp;radius=3100&amp;format=XML</string>
+    <string name="api_url_3">http://data.goteborg.se/ParkingService/v2.1/PublicTimeParkings/91274584-8cd7-447d-b4ed-7a36674a4494\?latitude=57.7072052&amp;longitude=11.9370855&amp;radius=3100&amp;format=XML</string>
+    <string name="api_url_4">http://data.goteborg.se/ParkingService/v2.1/PublicTollParkings/91274584-8cd7-447d-b4ed-7a36674a4494\?latitude=57.7072052&amp;longitude=11.9370855&amp;radius=3100&amp;format=XML</string>
+    <string name="api_url_5">http://data.goteborg.se/ParkingService/v2.1/ResidentialParkings/91274584-8cd7-447d-b4ed-7a36674a4494\?latitude=57.7072052&amp;longitude=11.9370855&amp;radius=3100&amp;format=XML</string>
+    <string name="api_name_1">CommuterParking</string>
+    <string name="api_name_2">PrivateParking</string>
+    <string name="api_name_3">PublicTimeParking</string>
+    <string name="api_name_4">PublicTollParking</string>
+    <string name="api_name_5">ResidentialParking</string>
+</resources>
