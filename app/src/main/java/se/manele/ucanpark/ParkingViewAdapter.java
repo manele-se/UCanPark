@@ -1,4 +1,4 @@
-package com.example.ddegjj.parkingapp;
+package se.manele.ucanpark;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,12 +13,15 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
+import se.manele.ucanpark.parkingapp.R;
+
 import static android.support.v4.content.ContextCompat.getColor;
 
 
 /**
- * @Version 2018-10-11
- * @author Elena Marzi, Daniel Duvanå, David Svensson, Johannes Magnusson, Gustaf Lindqvist, Johan Yngvesson
+ * @Version 2019-04-01
+ * @author Elena Marzi
+ *
  * This class is an adapter. Adapters provide a binding from an app-specific data set
  * to views that are displayed within a View, in this case a RecyclerView.
  */
@@ -56,7 +59,6 @@ public class ParkingViewAdapter extends RecyclerView.Adapter<ParkingViewAdapter.
             mTextViewDist = itemView.findViewById(R.id.distance);
             mParkingColor = itemView.findViewById(R.id.parkingColor);
             mSign         = itemView.findViewById(R.id.parkingSign);
-
         }
     }
 

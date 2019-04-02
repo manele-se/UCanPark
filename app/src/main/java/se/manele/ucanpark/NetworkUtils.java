@@ -1,12 +1,9 @@
-package com.example.ddegjj.parkingapp;
-
-import android.os.Debug;
+package se.manele.ucanpark;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -14,8 +11,8 @@ import java.util.ArrayList;
  * This class is a helper class with the purpose of fetching and parsing
  * data from Göteborgs Parkering API. This class should not be instantiated.
  *
- * @author David Svensson, Daniel Duvanå, Elena Marzi
- * @version 2018-09-28
+ * @version 2019-04-01
+ * @author Elena Marzi
  */
 public final class NetworkUtils {
     private NetworkUtils(){
@@ -122,9 +119,9 @@ public final class NetworkUtils {
             }
 
         } catch (XmlPullParserException | IOException e) {
-            Parking p = new Parking();
+            /*Parking p = new Parking();
             p.setName("Network error");
-            parkings.add(p);
+            parkings.add(p);*/
         }
         return parkings;
     }

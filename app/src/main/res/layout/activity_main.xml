@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- @version 2018-09-20
-     @author Daniel Duvanå, David Svensson, Johannes Magnusson
+<!-- @version 2019-04-01
+     @author Elena Marzi
      This is the foundation in our design. It's simply a RecyclerView.
      A RecyclerView is a list with items. The design of the items is defined
      in the parking_view.xml file. -->

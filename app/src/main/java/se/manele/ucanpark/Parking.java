@@ -1,24 +1,19 @@
-package com.example.ddegjj.parkingapp;
+package se.manele.ucanpark;
 
 import android.support.annotation.NonNull;
 
-import java.time.DayOfWeek;
-import java.time.LocalDateTime;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import org.joda.time.DateTimeConstants;
+import org.joda.time.Instant;
 
 import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * This class is responsable to handle data concerning a parking spot.
+ * This class is responsible to handle data concerning a parking spot.
  *
- * @version: 2018-10-04
- * @author: Elena Marzi, David Svensson, Gustaf Lindqvist, Johan Yngvesson, Daniel Duvanå
+ * @version 2019-04-01
+ * @author Elena Marzi
  */
 
 public class Parking {
@@ -114,7 +109,7 @@ public class Parking {
      * @return ParkingStatus one of four possible statuses, from ParkingStatus enum.
      */
     public ParkingStatus getParkingStatus() {
-        if (rules != null && rules.isParkingForbidden(LocalDateTime.now())) {
+        if (rules != null && rules.isParkingForbidden(Instant.now())) {
             return ParkingStatus.PARKING_FORBIDDEN;
         }
         if (freeSpots == null) {
@@ -179,7 +174,7 @@ public class Parking {
 
         if (match.find()) {
             String weekday = match.group(1);
-            DayOfWeek day = getDayOfWeek(weekday);
+            int day = getDayOfWeek(weekday);
 
             int startHour = Integer.parseInt(match.group(2), 10);
             int startMinute = Integer.parseInt(match.group(3), 10);
@@ -263,14 +258,14 @@ public class Parking {
     }
 
     @NonNull
-    private DayOfWeek getDayOfWeek(String weekday) {
-        return weekday.equals("mån") ? DayOfWeek.MONDAY :
-                weekday.equals("tis") ? DayOfWeek.TUESDAY :
-                weekday.equals("ons") ? DayOfWeek.WEDNESDAY :
-                weekday.equals("tors")? DayOfWeek.THURSDAY :
-                weekday.equals("fre") ? DayOfWeek.FRIDAY :
-                weekday.equals("lör") ? DayOfWeek.SATURDAY :
-                                        DayOfWeek.SUNDAY;
+    private int getDayOfWeek(String weekday) {
+        return weekday.equals("mån") ? DateTimeConstants.MONDAY :
+               weekday.equals("tis") ? DateTimeConstants.TUESDAY :
+               weekday.equals("ons") ? DateTimeConstants.WEDNESDAY :
+               weekday.equals("tors")? DateTimeConstants.THURSDAY :
+               weekday.equals("fre") ? DateTimeConstants.FRIDAY :
+               weekday.equals("lör") ? DateTimeConstants.SATURDAY :
+                                       DateTimeConstants.SUNDAY;
     }
 
     /**
